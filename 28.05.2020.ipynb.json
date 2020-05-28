@@ -1,0 +1,560 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Strings:\n",
+    "1. \" \" or ' '(characters) --> 'a' length=1\n",
+    "2. they are immutable\n",
+    "3. collection of characters enclosed by quotations marks--> iterable objects"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enter a stringPranav\n",
+      "<class 'str'> <class 'str'> <class 'str'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1=\"Hello\"\n",
+    "s2=input(\"enter a string\")\n",
+    "s3='Good Afternoon'\n",
+    "print(type(s1),type(s2),type(s3))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "HelloPranavGood Afternoon\n",
+      "HelloHelloHello\n",
+      "v\n",
+      "v\n",
+      "anav\n",
+      "Pranav\n",
+      "Pranav\n",
+      "Paa\n",
+      "Paa\n",
+      "vanarP\n",
+      "True\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "#operator: +,*,[],[start:stop],in not in\n",
+    "print(s1+s2+s3)#concatenation\n",
+    "print(s1*3)#repetition\n",
+    "print(s2[5])#slice\n",
+    "print(s2[-1])#slice\n",
+    "print(s2[2:])#start=0,stop=length of string,step=1\n",
+    "print(s2[:6])\n",
+    "print(s2[:])\n",
+    "#Alternate charaters of string:\n",
+    "print(s2[0:6:2])\n",
+    "print(s2[::2])\n",
+    "#reverse String:\n",
+    "print(s2[::-1])\n",
+    "# in and not in \n",
+    "print(\"av\" in s2) #True\n",
+    "print(\"av\" not in s2) #False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "not palindrome\n"
+     ]
+    }
+   ],
+   "source": [
+    "if s2 == s2[::-1]:\n",
+    "    print(\"Palindrome\")\n",
+    "else:\n",
+    "    print(\"not palindrome\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enter a number12321\n",
+      "Palindrome\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input(\"enter a number\"))\n",
+    "if str(n) == str(n)[::-1]:\n",
+    "    print(\"Palindrome\")\n",
+    "else:\n",
+    "    print(\"Note Palindrome\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Built-in Functions:\n",
+    "1. len() --> Length of the string\n",
+    "2. max() -->highest character depending on askey value or alphabetical order\n",
+    "3. min() -->lowest character depending on askey value or alphabetical order\n",
+    "4. str() -->converting any. data type to string data type"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "1\n",
+      "c\n",
+      "e\n",
+      "o\n"
+     ]
+    }
+   ],
+   "source": [
+    "s=\"hello\"\n",
+    "s1=\"abc123\"\n",
+    "print(len(s))\n",
+    "print(min(s1))\n",
+    "print(max(s1))\n",
+    "print(min(s))\n",
+    "print(max(s))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Built-in Methods:\n",
+    "1. Capitalize()\n",
+    "2. isalpha()\n",
+    "3. isdigit()\n",
+    "4. isalnum()\n",
+    "4. isupper()\n",
+    "5. islower()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n",
+      "Hello\n"
+     ]
+    }
+   ],
+   "source": [
+    "s='hello'\n",
+    "print(len(s))\n",
+    "s=s.capitalize()\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n",
+      "True\n",
+      "False\n",
+      "False\n",
+      "True\n",
+      "False\n",
+      "True\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1=\"hello\"\n",
+    "s2=\"abc123\"\n",
+    "s3=\"123\"\n",
+    "print(s1.isalpha())\n",
+    "print(s1.isdigit())\n",
+    "print(s1.isalnum())\n",
+    "print(s2.isalpha())\n",
+    "print(s2.isdigit())\n",
+    "print(s2.isalnum())\n",
+    "print(s3.isalpha())\n",
+    "print(s3.isdigit())\n",
+    "print(s3.isalnum())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n",
+      "False\n",
+      "False\n",
+      "True\n",
+      "False\n",
+      "False\n",
+      "PRANAV\n",
+      "pranav\n",
+      "pranav\n",
+      "PRANAV\n",
+      "pranav\n",
+      "PRANAV\n",
+      "PRANAV\n",
+      "pranav\n",
+      "pRANAV\n"
+     ]
+    }
+   ],
+   "source": [
+    "s=\"PRANAV\"\n",
+    "s1=\"pranav\"\n",
+    "s2=\"Pranav\"\n",
+    "print(s.isupper())\n",
+    "print(s.islower())\n",
+    "print(s1.isupper())\n",
+    "print(s1.islower())\n",
+    "print(s2.isupper())\n",
+    "print(s2.islower())\n",
+    "print(s.upper())\n",
+    "print(s.lower())\n",
+    "print(s.swapcase())\n",
+    "print(s1.upper())\n",
+    "print(s1.lower())\n",
+    "print(s1.swapcase())\n",
+    "print(s2.upper())\n",
+    "print(s2.lower())\n",
+    "print(s2.swapcase())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s=\"abc abc abc\"\n",
+    "s.count(\"abc\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['abc', 'abc', 'abc']"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#split()\n",
+    "s.split()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['a', 'b', 'c']"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s1=\"a:b:c\"\n",
+    "s1.split(\":\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "azc\n"
+     ]
+    }
+   ],
+   "source": [
+    "#replace -->\n",
+    "s=\"abc\"\n",
+    "#s[1]='z'\n",
+    "s=s.replace('b','z')\n",
+    "print(s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enter position3\n",
+      "enter a stringpranav\n",
+      "pr nav\n"
+     ]
+    }
+   ],
+   "source": [
+    "n=int(input(\"enter position\"))\n",
+    "s=input(\"enter a string\")\n",
+    "print (s.replace(s[n-1],' ',1))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### for loop:\n",
+    "1. for loop with range() function\n",
+    "2. for loop with iterable objects"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Syntax of for loop: \n",
+    "```for variable_name in range(start,stop,step):\n",
+    "    statements```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n",
+      "\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "#print 1-n numbers on the screen\n",
+    "n=10\n",
+    "for i in range(1,n+1):\n",
+    "    print(i)\n",
+    "print()\n",
+    "\n",
+    "i=1\n",
+    "while i<n:\n",
+    "    print(i)\n",
+    "    i += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "```for variable in iterable obj:\n",
+    "    statements```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "p\n",
+      "y\n",
+      "t\n",
+      "h\n",
+      "o\n",
+      "n\n"
+     ]
+    }
+   ],
+   "source": [
+    "s=\"python\"\n",
+    "for i in s:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "p\n",
+      "y\n",
+      "t\n",
+      "h\n",
+      "o\n",
+      "n\n",
+      "p\n",
+      "y\n",
+      "t\n",
+      "h\n",
+      "o\n",
+      "n\n"
+     ]
+    }
+   ],
+   "source": [
+    "#using while loop for above\n",
+    "s=\"python\"\n",
+    "i = 0\n",
+    "while i< len(s):\n",
+    "    print(s[i])\n",
+    "    i +=1\n",
+    "#using for loop but you should not use iterable object \n",
+    "for j in range(0,len(s)):\n",
+    "    print(s[j])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Accept a string from the user and count number of vowels,consonants and specal characters\n",
+    "2. count no. of pairs of a given string\n",
+    "   string--> \"abbaccbbaaa\"\n",
+    "   output--> 2\n",
+    "3. string-->\"(((())()()))))()\"\n",
+    "   output --> 8"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
